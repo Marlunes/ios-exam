@@ -39,10 +39,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="personsTableView" destination="E2P-Ms-oSY" id="mrF-YJ-NT1"/>
+                        <outlet property="viewModel" destination="rhZ-38-hHE" id="i7P-h7-ZNb"/>
                         <segue destination="a0q-9e-DfS" kind="presentation" id="uOn-fn-Sf7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="rhZ-38-hHE" customClass="PersonViewModel" customModule="ios_exam" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>

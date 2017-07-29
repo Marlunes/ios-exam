@@ -8,21 +8,14 @@
 
 import UIKit
 import CoreData
+import Alamofire
 
 class PersonViewModel: NSObject {
     
-    /*
-     if there is a cache, the app will get the data from storage
-     otherwise pull the data from the remote server.
-    */
-    func getPersonsData(completion: ((_ data: [Person]) -> Void)){
+    func getPersonsData() -> [Person]{
         
         let cachedPerson = getDataFromCoreData()
-        if cachedPerson.count > 0{
-            completion(cachedPerson)
-        }else{
-            
-        }
+        return cachedPerson
         
     }
     
@@ -44,8 +37,28 @@ class PersonViewModel: NSObject {
         
     }
     
-    func getPersonDataFromRemoteServer(completion: (_ data: [Person]) -> Void)){
-    
+    func getPersonDataFromRemoteServer(completed: @escaping ((_ success: Bool) -> Void)){
+        
+        let url = "https://randomapi.com/api/6396f911938d4f237f3371c4ba876115"
+        Alamofire.request(url).responseJSON { response in
+            
+            if let json = response.result.value as? NSDictionary{
+                if let results = json["results"] as? [NSDictionary]{
+                    for dict in results{
+                        if let converted = dict as? [String: Any]{
+                            _ = PersonParser.parse(fromDictionary: converted)
+                        }
+                    }
+                    completed(true)
+                }else{
+                    completed(false)
+                }
+            }else{
+                completed(false)
+            }
+            
+        }
+        
     }
 
 }
