@@ -13,7 +13,7 @@ class PersonParser : NSManagedObject{
 	 * Instantiate the instance using the passed dictionary values to set the properties values
 	 */
 	class func parse(fromDictionary dictionary: [String:Any])	{
-        let entity = NSEntityDescription.insertNewObject(forEntityName: "Person", into: AppDelegate().persistentContainer.viewContext) as! Person
+        let entity = NSEntityDescription.insertNewObject(forEntityName: "Person", into: Database.getContext()) as! Person
         if let addressValue = dictionary["address"] as? String{
             entity.address = addressValue
         }
@@ -37,7 +37,7 @@ class PersonParser : NSManagedObject{
             entity.mobileNumber = mobileNumberValue
         }
         
-        AppDelegate().saveContext()
+        Database.saveContext()
 	}
 
 

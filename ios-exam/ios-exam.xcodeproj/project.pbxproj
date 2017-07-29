@@ -17,6 +17,7 @@
 		3725A2F11F2CF89A0066807F /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3725A2F01F2CF89A0066807F /* PersonViewModel.swift */; };
 		3725A2F31F2CF8C20066807F /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3725A2F21F2CF8C20066807F /* PersonViewController.swift */; };
 		3725A2F51F2D1B3E0066807F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3725A2F41F2D1B3E0066807F /* Utility.swift */; };
+		3725A2F81F2D25AC0066807F /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3725A2F71F2D25AC0066807F /* Database.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3725A2F01F2CF89A0066807F /* PersonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
 		3725A2F21F2CF8C20066807F /* PersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 		3725A2F41F2D1B3E0066807F /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		3725A2F71F2D25AC0066807F /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		75E5869AF1C19CE4CD92A3F3 /* Pods-ios-exam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-exam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-exam/Pods-ios-exam.debug.xcconfig"; sourceTree = "<group>"; };
 		E0999B0E7491AEE73C431FFD /* Pods_ios_exam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_exam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 		3725A2D51F2CE7D10066807F /* ios-exam */ = {
 			isa = PBXGroup;
 			children = (
+				3725A2F61F2D257D0066807F /* Database */,
 				3725A2F41F2D1B3E0066807F /* Utility.swift */,
 				3725A2EF1F2CEEF70066807F /* Views */,
 				3725A2EE1F2CEEED0066807F /* Model */,
@@ -105,6 +108,14 @@
 				3725A2F01F2CF89A0066807F /* PersonViewModel.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		3725A2F61F2D257D0066807F /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				3725A2F71F2D25AC0066807F /* Database.swift */,
+			);
+			name = Database;
 			sourceTree = "<group>";
 		};
 		B9AE8539CF58267B708C4EAD /* Frameworks */ = {
@@ -252,6 +263,7 @@
 				3725A2F51F2D1B3E0066807F /* Utility.swift in Sources */,
 				3725A2D71F2CE7D10066807F /* AppDelegate.swift in Sources */,
 				3725A2EC1F2CEEE30066807F /* PersonParser.swift in Sources */,
+				3725A2F81F2D25AC0066807F /* Database.swift in Sources */,
 				3725A2DF1F2CE7D10066807F /* ios_exam.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

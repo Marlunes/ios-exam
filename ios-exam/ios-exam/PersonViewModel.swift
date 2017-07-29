@@ -22,7 +22,7 @@ class PersonViewModel: NSObject {
     func getDataFromCoreData() -> [Person]{
         
         let fetchRequest: NSFetchRequest<Person> = Person.fetchRequest()
-        let context = AppDelegate().persistentContainer.viewContext
+        let context = Database.persistentContainer.viewContext
         
         do{
             let persons = try context.fetch(fetchRequest)
