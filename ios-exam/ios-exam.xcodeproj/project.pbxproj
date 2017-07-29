@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		3725A2D71F2CE7D10066807F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3725A2D61F2CE7D10066807F /* AppDelegate.swift */; };
-		3725A2D91F2CE7D10066807F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3725A2D81F2CE7D10066807F /* ViewController.swift */; };
 		3725A2DC1F2CE7D10066807F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3725A2DA1F2CE7D10066807F /* Main.storyboard */; };
 		3725A2DF1F2CE7D10066807F /* ios_exam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3725A2DD1F2CE7D10066807F /* ios_exam.xcdatamodeld */; };
 		3725A2E11F2CE7D10066807F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3725A2E01F2CE7D10066807F /* Assets.xcassets */; };
 		3725A2E41F2CE7D10066807F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3725A2E21F2CE7D10066807F /* LaunchScreen.storyboard */; };
+		3725A2EC1F2CEEE30066807F /* PersonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3725A2EB1F2CEEE30066807F /* PersonParser.swift */; };
+		3725A2F11F2CF89A0066807F /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3725A2F01F2CF89A0066807F /* PersonViewModel.swift */; };
+		3725A2F31F2CF8C20066807F /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3725A2F21F2CF8C20066807F /* PersonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3725A2D31F2CE7D10066807F /* ios-exam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-exam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3725A2D61F2CE7D10066807F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3725A2D81F2CE7D10066807F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3725A2DB1F2CE7D10066807F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3725A2DE1F2CE7D10066807F /* ios_exam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios_exam.xcdatamodel; sourceTree = "<group>"; };
 		3725A2E01F2CE7D10066807F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3725A2E31F2CE7D10066807F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3725A2E51F2CE7D10066807F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3725A2EB1F2CEEE30066807F /* PersonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonParser.swift; sourceTree = "<group>"; };
+		3725A2F01F2CF89A0066807F /* PersonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
+		3725A2F21F2CF8C20066807F /* PersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,9 @@
 		3725A2D51F2CE7D10066807F /* ios-exam */ = {
 			isa = PBXGroup;
 			children = (
-				3725A2D61F2CE7D10066807F /* AppDelegate.swift */,
-				3725A2D81F2CE7D10066807F /* ViewController.swift */,
+				3725A2EF1F2CEEF70066807F /* Views */,
+				3725A2EE1F2CEEED0066807F /* Model */,
+				3725A2ED1F2CEEE60066807F /* Delegate */,
 				3725A2DA1F2CE7D10066807F /* Main.storyboard */,
 				3725A2E01F2CE7D10066807F /* Assets.xcassets */,
 				3725A2E21F2CE7D10066807F /* LaunchScreen.storyboard */,
@@ -65,6 +70,31 @@
 				3725A2DD1F2CE7D10066807F /* ios_exam.xcdatamodeld */,
 			);
 			path = "ios-exam";
+			sourceTree = "<group>";
+		};
+		3725A2ED1F2CEEE60066807F /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				3725A2D61F2CE7D10066807F /* AppDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		3725A2EE1F2CEEED0066807F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3725A2EB1F2CEEE30066807F /* PersonParser.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3725A2EF1F2CEEF70066807F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3725A2F01F2CF89A0066807F /* PersonViewModel.swift */,
+				3725A2F21F2CF8C20066807F /* PersonViewController.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3725A2D91F2CE7D10066807F /* ViewController.swift in Sources */,
+				3725A2F31F2CF8C20066807F /* PersonViewController.swift in Sources */,
+				3725A2F11F2CF89A0066807F /* PersonViewModel.swift in Sources */,
 				3725A2D71F2CE7D10066807F /* AppDelegate.swift in Sources */,
+				3725A2EC1F2CEEE30066807F /* PersonParser.swift in Sources */,
 				3725A2DF1F2CE7D10066807F /* ios_exam.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
