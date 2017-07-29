@@ -26,24 +26,18 @@ class Utility: NSObject {
         
         let f = DateFormatter()
         f.timeZone = TimeZone.autoupdatingCurrent
-        f.dateFormat = "dd/MM/yy"
+        f.dateFormat = "MMMM dd, yyyy"
         
         return f.string(from: date)
         
     }
     
-    class func getAge(_ birth:String) -> Int16 {
-        let f = DateFormatter()
-        //f.timeZone = NSTimeZone.localTimeZone()
-        f.timeZone = TimeZone(abbreviation: "UTC");
-        f.dateFormat = "YYYY-MM-DD"
-        
-        let startDate = f.date(from: birth)
+    class func getAge(_ birth: Date) -> Int16 {
         let calendar = Calendar.current
         
-        let dateComponents = (calendar as NSCalendar).components([.month,.weekOfMonth,.hour, .day, .minute, .second], from: startDate!, to: Date(), options: [])
+        let dateComponents = (calendar as NSCalendar).components([.year], from: birth, to: Date(), options: [])
         
-        let year = Int16(abs(dateComponents.month!))
+        let year = Int16(abs(dateComponents.year!))
         
         return year
     }

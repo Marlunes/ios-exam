@@ -15,6 +15,9 @@ class PersonViewController: UIViewController {
     @IBOutlet var viewModel: PersonViewModel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //prevents tableview from having extra lines
+        self.personsTableView.tableFooterView = UIView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -32,6 +35,12 @@ class PersonViewController: UIViewController {
             })
         }
 
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! PersonDetailsViewController
+        let index = personsTableView.indexPathForSelectedRow!.row
+        destination.person = viewModel.getPersonsData()[index]
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,7 +71,7 @@ extension PersonViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        self.performSegue(withIdentifier: "details_segue", sender: self)
     }
     
 }

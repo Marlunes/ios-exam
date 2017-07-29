@@ -18,6 +18,7 @@
 		3725A2F31F2CF8C20066807F /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3725A2F21F2CF8C20066807F /* PersonViewController.swift */; };
 		3725A2F51F2D1B3E0066807F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3725A2F41F2D1B3E0066807F /* Utility.swift */; };
 		3725A2F81F2D25AC0066807F /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3725A2F71F2D25AC0066807F /* Database.swift */; };
+		3725A2FA1F2D2D060066807F /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3725A2F91F2D2D060066807F /* PersonDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3725A2F21F2CF8C20066807F /* PersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 		3725A2F41F2D1B3E0066807F /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		3725A2F71F2D25AC0066807F /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		3725A2F91F2D2D060066807F /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
 		75E5869AF1C19CE4CD92A3F3 /* Pods-ios-exam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-exam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-exam/Pods-ios-exam.debug.xcconfig"; sourceTree = "<group>"; };
 		E0999B0E7491AEE73C431FFD /* Pods_ios_exam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_exam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 			children = (
 				3725A2F21F2CF8C20066807F /* PersonViewController.swift */,
 				3725A2F01F2CF89A0066807F /* PersonViewModel.swift */,
+				3725A2F91F2D2D060066807F /* PersonDetailsViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3725A2FA1F2D2D060066807F /* PersonDetailsViewController.swift in Sources */,
 				3725A2F31F2CF8C20066807F /* PersonViewController.swift in Sources */,
 				3725A2F11F2CF89A0066807F /* PersonViewModel.swift in Sources */,
 				3725A2F51F2D1B3E0066807F /* Utility.swift in Sources */,

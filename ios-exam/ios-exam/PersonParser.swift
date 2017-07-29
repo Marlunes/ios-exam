@@ -19,7 +19,7 @@ class PersonParser : NSManagedObject{
         }
         if let birthdayValue = dictionary["birthday"] as? String{
             entity.birthday = Utility.convertToDate(birthdayValue) as NSDate
-            entity.age = Utility.getAge(birthdayValue)
+            //entity.age = Utility.getAge(birthdayValue)
         }
         if let contactPersonValue = dictionary["contact_person"] as? String{
             entity.contactPerson = contactPersonValue

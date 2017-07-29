@@ -39,7 +39,10 @@ class PersonViewModel: NSObject {
     
     func getPersonDataFromRemoteServer(completed: @escaping ((_ success: Bool) -> Void)){
         
-        let url = "https://randomapi.com/api/6396f911938d4f237f3371c4ba876115"
+        //for the demo, the app will pull 8 ramdom users
+        let resultsParam = "8"
+        
+        let url = "https://randomapi.com/api/6396f911938d4f237f3371c4ba876115?results=\(resultsParam)"
         Alamofire.request(url).responseJSON { response in
             
             if let json = response.result.value as? NSDictionary{
