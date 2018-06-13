@@ -6,7 +6,7 @@ To assess a developer's skills in terms of developing iOS apps and decision-maki
 ## Tasks ##
 
 - Fork this repository
-- Create an iOS Swift 3 project with the following features:
+- Create an iOS Swift 4 project with the following features:
     - Uses Model-View ViewModel Design Pattern
     - Loads and shows a list of Persons from a remote source
     - Caches the loaded list of Persons
